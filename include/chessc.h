@@ -89,10 +89,10 @@ namespace ChessC
 
             char* getFEN();
             ChessSquare *getSquare(chessposX_t x, chessposY_t y);
-            std::vector<Move> getValidMoves(ChessSquare*);
-            std::vector<Move> getValidMoves(chessposX_t, chessposY_t);
-            bool  isValid(Move);
-            bool  isValid(chessposX_t initialX, chessposY_t initialY, chessposX_t finalX, chessposY_t finalY);
+            std::vector<Move> getValidMoves(ChessSquare*, bool check = true);
+            std::vector<Move> getValidMoves(chessposX_t, chessposY_t, bool check = true);
+            bool  isValid(Move, bool check = true);
+            bool  isValid(chessposX_t initialX, chessposY_t initialY, chessposX_t finalX, chessposY_t finalY, bool check = true);
             bool  isCheck(Types::PlayerType side);
             bool  isCheck(Types::PlayerType side, Move move);
             bool  isCheckMate(Types::PlayerType side);

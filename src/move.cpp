@@ -3,11 +3,11 @@
 using namespace ChessC;
 using namespace Types;
 
-std::vector<Move> Chessboard::getValidMoves(chessposX_t x, chessposY_t y)
+std::vector<Move> Chessboard::getValidMoves(chessposX_t x, chessposY_t y, bool check)
 {
-    return getValidMoves(getSquare(x, y));
+    return getValidMoves(getSquare(x, y), check);
 }
-std::vector<Move> Chessboard::getValidMoves(ChessSquare* square)
+std::vector<Move> Chessboard::getValidMoves(ChessSquare* square, bool check)
 {
     std::vector<Move> movelist;
     if (square == nullptr) return movelist;
